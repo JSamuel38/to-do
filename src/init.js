@@ -1,3 +1,5 @@
+import { loadHome } from './home.js'
+
 const content = document.createElement('div');
 content.id = 'content';
 
@@ -16,7 +18,7 @@ function createHeader() {
 
 function init() {
   createHeader();
-  document.body.appendChild(content);
+  document.body.appendChild(loadHome());
 }
 
 export { init };

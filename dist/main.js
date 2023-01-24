@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadHome\": () => (/* binding */ loadHome)\n/* harmony export */ });\nconst content = document.createElement('div');\r\n\r\nfunction loadProjectButton() {\r\n  const button = document.createElement('button');\r\n  const btnContainer = document.createElement('div');\r\n\r\n  btnContainer.classList.add('grid', 'place-content-center', 'min-w-screen', 'mt-8');\r\n  button.classList.add('border-solid', 'rounded', 'bg-gray-200', 'p-3', 'hover:bg-gray-300', 'active:bg-gray-400');\r\n  button.textContent = 'Add Project';\r\n  \r\n  btnContainer.appendChild(button);\r\n\r\n  return btnContainer;\r\n}\r\n\r\n\r\nfunction loadHome() {\r\n  content.appendChild(loadProjectButton());\r\n\r\n  return content;\r\n};\r\n\r\n\n\n//# sourceURL=webpack:///./src/home.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ini
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"init\": () => (/* binding */ init)\n/* harmony export */ });\nconst content = document.createElement('div');\r\ncontent.id = 'content';\r\n\r\nfunction createHeader() {\r\n  const header = document.createElement('header');\r\n  const title = document.createElement('h1');\r\n\r\n  header.classList.add('grid', 'bg-emerald-500', 'p-4');\r\n  title.classList.add('text-6xl', 'title-padding', 'text-white');\r\n\r\n  title.innerText = 'Do It';\r\n\r\n  header.appendChild(title);\r\n  document.body.appendChild(header);\r\n}\r\n\r\nfunction init() {\r\n  createHeader();\r\n  document.body.appendChild(content);\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./src/init.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"init\": () => (/* binding */ init)\n/* harmony export */ });\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n\r\n\r\nconst content = document.createElement('div');\r\ncontent.id = 'content';\r\n\r\nfunction createHeader() {\r\n  const header = document.createElement('header');\r\n  const title = document.createElement('h1');\r\n\r\n  header.classList.add('grid', 'bg-emerald-500', 'p-4');\r\n  title.classList.add('text-6xl', 'title-padding', 'text-white');\r\n\r\n  title.innerText = 'Do It';\r\n\r\n  header.appendChild(title);\r\n  document.body.appendChild(header);\r\n}\r\n\r\nfunction init() {\r\n  createHeader();\r\n  document.body.appendChild((0,_home_js__WEBPACK_IMPORTED_MODULE_0__.loadHome)());\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./src/init.js?");
 
 /***/ })
 
