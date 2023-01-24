@@ -1,6 +1,7 @@
-import { loadProjects } from './project.js';
+import { loadProjects, newProject } from './project.js';
 
 const content = document.createElement('div');
+content.id = 'content';
 
 function loadSortBy() {
   const content = document.createElement('div');
@@ -39,6 +40,7 @@ function loadButtons() {
   btnContainer.classList.add('grid',  'grid-cols-1', 'min-w-screen', 'mt-6', 'gap-4');
   projectBtn.classList.add('text-xl', 'border-solid', 'rounded', 'bg-gray-200', 'p-4', 'hover:bg-gray-300', 'active:bg-gray-400', 'justify-self-center');
   projectBtn.textContent = 'Add Project';
+  projectBtn.addEventListener('click', newProject);
   
   sort.classList.add('ml-8');
   

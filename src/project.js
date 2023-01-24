@@ -1,10 +1,21 @@
-
+let projectsList = [];
 
 const project = (title, dueDate, priority) => {
   return { title, dueDate, priority };
 }
 
-let projectsList = [project("Hello", "1907", "High"), project("Hello", "1907", "High"), project("Hello", "1907", "High"), project("Hello", "1907", "High")];
+function newProject() {
+  const container = document.getElementById('container');
+
+  let title = prompt('Title');
+  let dueDate = prompt('Due Date');
+  let priority = prompt('Priority');
+  let projectObj = project(title, dueDate, priority);
+
+  projectsList.push(projectObj);
+  let card = createProjectCard(projectObj);
+  container.appendChild(card);
+}
 
 function createProjectCard(project) {
   const card = document.createElement('div');
@@ -30,6 +41,7 @@ function createProjectCard(project) {
 
 function loadProjects() {
   const projectContainer = document.createElement('div');
+  projectContainer.id = 'container';
   projectContainer.classList.add('grid', 'w-2/3', 'm-auto', 'my-8', 'gap-8', 'auto-fit');
 
   for (let project of projectsList) {
@@ -39,4 +51,4 @@ function loadProjects() {
   return projectContainer;
 };
 
-export { loadProjects }
+export { loadProjects, newProject }
