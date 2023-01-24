@@ -626,6 +626,10 @@ video {
   gap: 0.5rem;
 }
 
+.self-start {
+  align-self: flex-start;
+}
+
 .justify-self-end {
   justify-self: end;
 }
@@ -687,6 +691,14 @@ video {
 
 .p-4 {
   padding: 1rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-xl {
