@@ -30,7 +30,7 @@ function createProjectCard(project) {
 
 function loadProjects() {
   const projectContainer = document.createElement('div');
-  projectContainer.classList.add('grid', 'w-2/3', 'm-auto', 'mt-8', 'gap-8', 'auto-fit');
+  projectContainer.classList.add('grid', 'w-2/3', 'm-auto', 'my-8', 'gap-8', 'auto-fit');
 
   for (let project of projectsList) {
     projectContainer.appendChild(createProjectCard(project));

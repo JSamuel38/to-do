@@ -36,8 +36,8 @@ function loadButtons() {
   const btnContainer = document.createElement('div');
   const sort = loadSortBy();
   
-  btnContainer.classList.add('grid',  'grid-cols-3', 'min-w-screen', 'mt-8');
-  projectBtn.classList.add('text-xl', 'border-solid', 'rounded', 'bg-gray-200', 'p-2', 'hover:bg-gray-300', 'active:bg-gray-400', 'justify-self-center');
+  btnContainer.classList.add('grid',  'grid-cols-1', 'min-w-screen', 'mt-6', 'gap-4');
+  projectBtn.classList.add('text-xl', 'border-solid', 'rounded', 'bg-gray-200', 'p-4', 'hover:bg-gray-300', 'active:bg-gray-400', 'justify-self-center');
   projectBtn.textContent = 'Add Project';
   
   sort.classList.add('ml-8');
