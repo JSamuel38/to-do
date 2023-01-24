@@ -1,3 +1,5 @@
+import { loadProjects } from './project.js';
+
 const content = document.createElement('div');
 
 function loadSortBy() {
@@ -48,7 +50,8 @@ function loadButtons() {
 
 function loadHome() {
   content.appendChild(loadButtons());
-    
+  content.appendChild(loadProjects());
+
   return content;
 };
 

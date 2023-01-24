@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 .title-padding {
-    padding-left: 15vw;
+  padding-left: 15vw;
+}
+
+.auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
