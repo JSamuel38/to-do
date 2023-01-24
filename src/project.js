@@ -12,7 +12,7 @@ function createProjectCard(project) {
   const dueDate = document.createElement('p');
   const priority = document.createElement('p');
 
-  card.classList.add('bg-emerald-500');
+  card.classList.add('bg-emerald-500', 'rounded-lg', 'p-2');
 
   title.innerText = project.title;
   dueDate.innerText = project.dueDate;

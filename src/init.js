@@ -16,9 +16,18 @@ function createHeader() {
   return header;
 }
 
+function createFooter() {
+  const footer = document.createElement('footer');
+  footer.classList.add('bg-black', 'opacity-60', 'min-w-screen', 'h-6', 'mt-auto');
+
+  return footer;
+}
+
 function init() {
+  document.body.classList.add('flex', 'flex-col', 'min-h-screen');
   document.body.appendChild(createHeader());
   document.body.appendChild(loadHome());
+  document.body.appendChild(createFooter());
 }
 
 export { init };
