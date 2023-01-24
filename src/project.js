@@ -12,11 +12,14 @@ function createProjectCard(project) {
   const dueDate = document.createElement('p');
   const priority = document.createElement('p');
 
-  card.classList.add('bg-emerald-500', 'rounded-lg', 'p-2');
+  card.classList.add('bg-blue-600', 'rounded-lg', 'p-2', 'text-white');
+  title.classList.add('font-bold', 'text-2xl');
+  dueDate.classList.add('text-xl');
+  priority.classList.add('text-xl');
 
   title.innerText = project.title;
-  dueDate.innerText = project.dueDate;
-  priority.innerText = project.priority;
+  dueDate.innerText = `Due: ${project.dueDate}`;
+  priority.innerText = `Priority: ${project.priority}`;
 
   card.appendChild(title);
   card.appendChild(dueDate);
