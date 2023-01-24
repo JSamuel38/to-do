@@ -7,7 +7,7 @@ function createHeader() {
   const header = document.createElement('header');
   const title = document.createElement('h1');
 
-  header.classList.add('grid', 'bg-emerald-500', 'p-4');
+  header.classList.add('grid', 'bg-emerald-500', 'p-4', 'shadow-lg');
   title.classList.add('text-6xl', 'title-padding', 'text-white');
 
   title.innerText = 'Do It';
