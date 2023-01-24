@@ -13,11 +13,11 @@ function createHeader() {
   title.innerText = 'Do It';
 
   header.appendChild(title);
-  document.body.appendChild(header);
+  return header;
 }
 
 function init() {
-  createHeader();
+  document.body.appendChild(createHeader());
   document.body.appendChild(loadHome());
 }
 
