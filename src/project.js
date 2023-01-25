@@ -2,22 +2,14 @@ import { projectForm } from './projectForm.js';
 
 let projectsList = [];
 
+const formPrompt = projectForm();
+
 const project = (title, dueDate, priority) => {
   return { title, dueDate, priority };
 }
 
 function newProject() {
-  const container = document.getElementById('container');
-
-  let formPrompt = projectForm();
   document.body.appendChild(formPrompt);
-
-
-  let projectObj = project(title, dueDate, priority);
-
-  projectsList.push(projectObj);
-  let card = createProjectCard(projectObj);
-  container.appendChild(card);
 }
 
 function createProjectCard(project) {
@@ -54,4 +46,4 @@ function loadProjects() {
   return projectContainer;
 };
 
-export { loadProjects, newProject }
+export { loadProjects, newProject, project, projectsList, createProjectCard };

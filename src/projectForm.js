@@ -1,16 +1,18 @@
-function projectForm() {
-  const form = document.createElement('form');
-  const titleLabel = document.createElement('label');
-  const dueDateLabel = document.createElement('label');
-  const priorityLabel = document.createElement('label');
-  const title = document.createElement('input');
-  const dueDate = document.createElement('input');
-  const priority = document.createElement('select');
-  const high = document.createElement('option');
-  const medium = document.createElement('option');
-  const low = document.createElement('option');
-  const formSubmit = document.createElement('button');
+import { project, projectsList, createProjectCard } from './project.js';
 
+const form = document.createElement('form');
+const titleLabel = document.createElement('label');
+const dueDateLabel = document.createElement('label');
+const priorityLabel = document.createElement('label');
+const title = document.createElement('input');
+const dueDate = document.createElement('input');
+const priority = document.createElement('select');
+const high = document.createElement('option');
+const medium = document.createElement('option');
+const low = document.createElement('option');
+const formSubmit = document.createElement('button');
+
+function projectForm() {
   titleLabel.innerText = 'Title:';
   dueDateLabel.innerText = 'Due Date:';
   priorityLabel.innerText = 'Priority:';
@@ -49,5 +51,17 @@ function projectForm() {
 
   return form;
 }
+
+formSubmit.addEventListener('click', (e) => {
+  // if (formPrompt.title === undefined || formPrompt.dueDate === undefined || formPrompt.priority === undefined) return;
+  let projectObj = project(title.value , dueDate.value , priority.value);
+  projectsList.push(projectObj);
+  document.body.removeChild(form);
+  let card = createProjectCard(projectObj);
+  container.appendChild(card);
+  console.log(form);
+  e.preventDefault();
+});
+
 
 export { projectForm };
