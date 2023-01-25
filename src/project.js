@@ -23,7 +23,7 @@ function createProjectCard(project) {
   const dueDate = document.createElement('p');
   const priority = document.createElement('p');
 
-  card.classList.add('bg-blue-600', 'rounded-lg', 'p-2', 'text-white', 'text-center');
+  card.classList.add('bg-blue-600', 'rounded-lg', 'p-2', 'text-white', 'text-center', 'break-words', 'flex', 'justify-center', 'flex-col', 'items-center');
   title.classList.add('font-bold', 'text-2xl');
   dueDate.classList.add('text-xl');
   priority.classList.add('text-xl');
