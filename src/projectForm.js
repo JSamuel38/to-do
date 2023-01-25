@@ -53,15 +53,16 @@ function projectForm() {
 }
 
 formSubmit.addEventListener('click', (e) => {
-  // if (formPrompt.title === undefined || formPrompt.dueDate === undefined || formPrompt.priority === undefined) return;
-  let projectObj = project(title.value , dueDate.value , priority.value);
-  projectsList.push(projectObj);
-  document.body.removeChild(form);
-  let card = createProjectCard(projectObj);
-  container.appendChild(card);
-  console.log(form);
+  if (!(title.value === '' || dueDate.value === '' || priority.value === '')) {
+    let projectObj = project(title.value , dueDate.value , priority.value);
+    projectsList.push(projectObj);
+    let card = createProjectCard(projectObj);
+    container.appendChild(card);
+    document.body.removeChild(form);
+  } else {
+    alert('Please fill in all fields');
+  }
   e.preventDefault();
 });
-
 
 export { projectForm };
