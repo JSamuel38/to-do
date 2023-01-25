@@ -11,9 +11,8 @@ function newProject() {
 
   let formPrompt = projectForm();
   document.body.appendChild(formPrompt);
-  // let title = prompt('Title');
-  // let dueDate = prompt('Due Date');
-  // let priority = prompt('Priority');
+
+
   let projectObj = project(title, dueDate, priority);
 
   projectsList.push(projectObj);

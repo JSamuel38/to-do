@@ -38,7 +38,7 @@ function loadButtons() {
   const sort = loadSortBy();
   
   btnContainer.classList.add('grid',  'grid-cols-1', 'min-w-screen', 'mt-6', 'gap-4');
-  projectBtn.classList.add('text-xl', 'border-solid', 'rounded', 'bg-gray-200', 'p-4', 'hover:bg-gray-300', 'active:bg-gray-400', 'justify-self-center');
+  projectBtn.classList.add('text-xl', 'rounded', 'bg-gray-200', 'p-4', 'hover:bg-gray-300', 'active:bg-gray-400', 'justify-self-center');
   projectBtn.textContent = 'Add Project';
   projectBtn.addEventListener('click', newProject);
   

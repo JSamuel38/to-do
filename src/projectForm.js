@@ -9,6 +9,7 @@ function projectForm() {
   const high = document.createElement('option');
   const medium = document.createElement('option');
   const low = document.createElement('option');
+  const formSubmit = document.createElement('button');
 
   titleLabel.innerText = 'Title:';
   dueDateLabel.innerText = 'Due Date:';
@@ -16,6 +17,7 @@ function projectForm() {
   high.innerText = 'High';
   medium.innerText = 'Medium';
   low.innerText = 'Low';
+  formSubmit.innerText = 'Add Project';
 
   titleLabel.htmlFor = 'titleIn';
   dueDateLabel.htmlFor = 'dueDateIn';
@@ -32,7 +34,7 @@ function projectForm() {
   title.classList.add('text-black');
   dueDate.classList.add('text-black');
   priority.classList.add('text-black');
-  
+  formSubmit.classList.add('text-black', 'rounded', 'bg-gray-200', 'px-4', 'py-2', 'hover:bg-gray-300', 'active:bg-gray-400');
 
   form.appendChild(titleLabel);
   form.appendChild(title);
@@ -40,6 +42,7 @@ function projectForm() {
   form.appendChild(dueDate);
   form.appendChild(priorityLabel);
   form.appendChild(priority);
+  form.appendChild(formSubmit);
   priority.appendChild(high);
   priority.appendChild(medium);
   priority.appendChild(low);
