@@ -1,3 +1,5 @@
+import { projectForm } from './projectForm.js';
+
 let projectsList = [];
 
 const project = (title, dueDate, priority) => {
@@ -7,9 +9,11 @@ const project = (title, dueDate, priority) => {
 function newProject() {
   const container = document.getElementById('container');
 
-  let title = prompt('Title');
-  let dueDate = prompt('Due Date');
-  let priority = prompt('Priority');
+  let formPrompt = projectForm();
+  document.body.appendChild(formPrompt);
+  // let title = prompt('Title');
+  // let dueDate = prompt('Due Date');
+  // let priority = prompt('Priority');
   let projectObj = project(title, dueDate, priority);
 
   projectsList.push(projectObj);

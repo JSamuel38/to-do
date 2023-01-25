@@ -9,3 +9,8 @@
 .auto-fit {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
+
+.center-form {
+  top: 33vh;
+  left: calc(50vw - 8rem);
+}
