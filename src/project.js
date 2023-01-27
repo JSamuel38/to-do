@@ -1,4 +1,5 @@
 import { projectForm } from './projectForm.js';
+import { loadToDo } from './todo.js';
 
 let projectsList = [];
 
@@ -13,6 +14,8 @@ function newProject() {
 }
 
 function createProjectCard(project) {
+  const container = document.getElementById('container');
+  const cardList = container.childNodes;
   const card = document.createElement('div');
   const title = document.createElement('h1');
   const dueDate = document.createElement('p');
@@ -38,9 +41,16 @@ function createProjectCard(project) {
     card.remove();
     e.preventDefault();
   });
-  
-  openBtn.addEventListener('click', () => {
-    console.log(card);
+
+  openBtn.addEventListener('click', (e) => {
+    let i = Array.prototype.indexOf.call(cardList, card);
+    let title = cardList[i].childNodes[0].textContent
+    let date = cardList[i].childNodes[1].textContent;
+    let priority = cardList[i].childNodes[2].textContent;
+
+    loadToDo(title, date, priority);
+
+    e.preventDefault();
   });
 
   card.appendChild(title);
