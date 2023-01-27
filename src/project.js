@@ -31,6 +31,12 @@ function createProjectCard(project) {
   priority.innerText = `Priority: ${project.priority}`;
   removeBtn.innerText = 'Remove';
 
+  removeBtn.addEventListener('click', (e) => {
+    card.remove();
+    e.preventDefault();
+  });
+  // openCard.addEventListener('click', openProject);
+
   card.appendChild(title);
   card.appendChild(dueDate);
   card.appendChild(priority);
