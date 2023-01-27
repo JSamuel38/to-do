@@ -17,29 +17,36 @@ function createProjectCard(project) {
   const title = document.createElement('h1');
   const dueDate = document.createElement('p');
   const priority = document.createElement('p');
+  const openBtn = document.createElement('button');
   const removeBtn = document.createElement('button');
 
   card.classList.add('bg-blue-600', 'rounded-lg', 'p-2', 'text-white', 'text-center', 'break-words', 'flex', 'justify-center', 'flex-col', 'items-center');
   title.classList.add('font-bold', 'text-2xl');
   dueDate.classList.add('text-xl');
   priority.classList.add('text-xl');
-  removeBtn.classList.add('bg-red-600', 'text-white', 'rounded', 'px-4', 'py-2', 'm-4', 'hover:bg-red-700', 'active:bg-red-800');
+  openBtn.classList.add('border-2', 'border-white', 'text-white', 'rounded', 'px-6', 'py-1', 'm-2', 'hover:bg-blue-700', 'active:bg-blue-800');
+  removeBtn.classList.add('border-2', 'border-white', 'text-white', 'rounded', 'px-4', 'py-1', 'm-2', 'hover:bg-blue-700', 'active:bg-blue-800');
 
 
   title.innerText = project.title;
   dueDate.innerText = `Due: ${project.dueDate}`;
   priority.innerText = `Priority: ${project.priority}`;
+  openBtn.innerText = 'Open';
   removeBtn.innerText = 'Remove';
 
   removeBtn.addEventListener('click', (e) => {
     card.remove();
     e.preventDefault();
   });
-  // openCard.addEventListener('click', openProject);
+  
+  openBtn.addEventListener('click', () => {
+    console.log(card);
+  });
 
   card.appendChild(title);
   card.appendChild(dueDate);
   card.appendChild(priority);
+  card.appendChild(openBtn);
   card.appendChild(removeBtn);
 
   return card;
@@ -51,7 +58,7 @@ function loadProjects() {
   projectContainer.classList.add('grid', 'w-2/3', 'm-auto', 'my-8', 'gap-8', 'auto-fit');
 
   for (let project of projectsList) {
-    projectContainer.appendChild(createProjectCard(project));
+    projectContainer.appendChild(project);
   }
 
   return projectContainer;
