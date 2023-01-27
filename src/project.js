@@ -67,9 +67,9 @@ function loadProjects() {
   projectContainer.id = 'container';
   projectContainer.classList.add('grid', 'w-2/3', 'm-auto', 'my-8', 'gap-8', 'auto-fit');
 
-  for (let project of projectsList) {
-    projectContainer.appendChild(project);
-  }
+  // for (let project of projectsList) {
+  //   projectContainer.appendChild(project);
+  // }
 
   return projectContainer;
 };

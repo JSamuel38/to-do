@@ -30,4 +30,4 @@ function init() {
   document.body.appendChild(createFooter());
 }
 
-export { init };
+export { init, createFooter, createHeader };
